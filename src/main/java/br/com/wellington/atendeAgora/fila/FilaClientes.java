@@ -1,14 +1,14 @@
 package br.com.wellington.atendeAgora.fila;
 
-import static arrumar.code.pessoa.PessoaStatic.IDADO_MAX_VELHO;
+import static br.com.wellington.atendeAgora.pessoa.PessoaStatic.IDADO_MAX_VELHO;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import arrumar.code.objeto.BaseRotinaObjeto;
-import arrumar.code.objeto.RotinaObjeto;
-import arrumar.code.pessoa.Cliente;
-import arrumar.code.ui.fila.FilaClientesImp;
+import br.com.wellington.atendeAgora.objeto.BaseRotinaObjeto;
+import br.com.wellington.atendeAgora.objeto.RotinaObjeto;
+import br.com.wellington.atendeAgora.pessoa.Cliente;
+import br.com.wellington.atendeAgora.ui.fila.FilaClientesImp;
 
 /**
  * Definição de uma fila de atendimento.
@@ -62,7 +62,7 @@ public class FilaClientes implements BaseRotinaObjeto, FilaClientesImp {
 			@Override // Gerador de cliente
 			protected void rotina() {
 				// Tenta gerar um cliente
-				if (arrumar.code.utilitarios.Geral.RANDOM.nextInt(100) < chanceTeste) {
+				if (br.com.wellington.atendeAgora.utilitarios.Geral.RANDOM.nextInt(100) < chanceTeste) {
 					add(new Cliente());
 				}
 			}

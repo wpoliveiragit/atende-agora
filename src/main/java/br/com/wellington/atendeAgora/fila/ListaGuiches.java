@@ -1,7 +1,7 @@
 package br.com.wellington.atendeAgora.fila;
 
-import arrumar.code.guiche.Guiche;
-import arrumar.code.ui.fila.ListaAtendentes;
+import br.com.wellington.atendeAgora.guiche.Guiche;
+import br.com.wellington.atendeAgora.ui.fila.ListaAtendentes;
 
 /**
  * Guarda todos os guiches disponíveis para o controle do sistema.
