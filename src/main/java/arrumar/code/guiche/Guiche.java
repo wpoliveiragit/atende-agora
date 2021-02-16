@@ -18,7 +18,7 @@ import br.com.wellington.atendeAgora.fila.FilaClientes;
  */
 public class Guiche implements BaseRotinaObjeto, GuicheImp {
 
-	// * ATRIBUTOS **************************************************************
+	// * ATRIBUTOS *************************************************************
 	/**
 	 * Lista de atendentes disponíveis.
 	 */
