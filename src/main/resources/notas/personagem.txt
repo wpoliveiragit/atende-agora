@@ -1,0 +1,108 @@
+= PROBLEMAS ======================================================================= 
+
+TIPO |  TEMPO  | ERRO
+-----+---------+------
+  A  |  1000   |  26    
+  B  |  1500   |  28
+  C  |  2000   |  30
+  D  |  2500   |  32
+  E  |  3000   |  34
+  F  |  3500   |  36
+  G  |  4000   |  38
+  H  |  4500   |  40
+  I  |  5000   |  42
+
+= Personagem ======================================================================
+Atributos 
+ - nome:String (10 HOMENS 10 MULHERES)
+ - idade:int (15 A 80)
+ - sexo:boolean (true/false homem/mulher)
+ - problema:int 
+Métodos
+ - falar(assunto:int):int
+        
+SEXO: homem/mulher  500/1000
+
+========== FAIXA ETÁRIA ==========
+  IDADE   |        INFO        | TEMPO
+----------+--------------------+------
+(15 a 17) | [JJ] Jovem         |  150
+(18 a 24) | [JA] Jovem Adulto  |  200
+(25 a 34) | [AA] Adulto        |  250
+(35 a 49) | [AV] Adulto Velho  |  300
+(50 a 59) | [VV] Velho         |  350
+(  60+  ) | [VI] Velho Idoso   |  400
+
+CASOS
+    * Criar um metodo de busca de problemas por idade
+    * Os casos são divididos em oito tipos e cada um tem seu tempo de resolução        
+        - (100)(JJ) Jovem    
+        - (200)(JA) Jovem/Adulto
+        - (300)(AA) Adulto
+        - (400)(AV) Adulto/Velho
+        - (500)(VV) Velho
+        - (600)(VI) Velho/Idoso
+        - (700)(II) Idoso
+        - (800)(TT) Todos
+
+Representa uma fila de clientes com as caracteristicas
+    * tamanho maximo da fila definida por um numero estatico
+    * Forma Geometrica
+        - Retangulo horizontal na base inferior do Frame, onde será dividido em
+      dez partes de tamanhos iguais representando os espaços de cada cliente
+        Obs.: O tamanho da fila pode ser maior que os dez espaços disponiveis,
+      mas apenas dez posições de possoas podem existir na fila.
+
+      +---------------------------------------------------------------------+
+      |      |      |      |      |      |      |      |      |      |      |     
+      |      |      |      |      |      |      |      |      |      |      |
+      +---------------------------------------------------------------------+
+
+GUICHE
+    * Deverá comportar uma pessoa
+    * Ter um status de aberto/fechado 
+    * Ter um status de disponivel/ocupado
+    * Um método de atendimento do cliente
+    * Uma threadde de controle do atendimento e dos status
+    * Forma Geometrica - Retangulo
+    * CORES
+        - PRETO ----> Guiche Fechado
+        - AMARELO --> Guiche Aberto e Disponivel
+        - VERMELHO -> Guiche Aberto e Ocupado
+        
+PROPÓSTA
+    Simular atendimentos de poupa tempo entre guiche e clientes
+
+CONHECIMENTO
+    * Lógica básica
+    * Conhecimento básico em programação em qualquer linguagem
+
+INTERFACE
+    * Frame em retangulo
+    * Dentro do Frame na parte superior, alinhar de forma horizontal os guiches
+    * Dentro do Frane na parte inferior, colocar a fila de clientes na horizontal
+
+COMANDOS DO PROGRAMA
+    ESPAÇO - Preenche a fila com novos clientes
+    ESC ---- fecha o programa
+    Fx ----- Seleciona o guiche referente ao numero 'x'
+        'A'- Abre o guiche.
+        'F'- Fecha o guiche.
+
+ROTINAS AUTOMÁTICAS
+    * Assim que um guiche ficar disponivel, emitira um som e pegara o próximo da 
+fila, caso a fila esteja vazia, fara uma pausa e chamara novamente, se caso 
+ainda não existir clientes na fila o guiche devera fechar.
+    * Após um cliente ser atendido, registre em um .log:
+        - nomeCLiente
+        - idade
+        - sexo
+        - problema
+        - horaEntradaFila
+        - horaEntradaGuiche
+        - horaSaidaGuiche
+
+PROBLEMAS
+    Atributos
+        - tipo
+        - Info

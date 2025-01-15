@@ -1,0 +1,148 @@
+1- TRABALHOS INTERNOS
+    * Cadastrar novos clientes -> tempo: 6000ms
+    * Cadastrar novos funcionários -> tempo: 4000ms
+
+2- ALTERAÇÕES NA CLASSE Apoio.ArquivoTxt
+    * Criar método de criação de pasta: ok
+    * Criar método de criação de arquivo: ok
+    * Criar método de recuperação de informações: ok
+
+3- TESTES DE PACOTES
+    * Criar classe de teste para cada pacote.
+
+===============================================================================
+                          CLIENTE (Entidade)
+===============================================================================
+  Atributos:
+      - nome
+      - idade
+      - sexo
+      - horaEntradaFila
+      - horaEntradaGuiche
+      - horaSaidaGuiche
+      - problema
+
+  Métodos:
+      - calcularTempoComunicacao()
+
+  Funções adicionais:
+      * Criar gerador de idade (15 a 75)
+      * Criar buscador de hora atual
+      * Criar fórmula para calcular o tempo de comunicação
+
+  Forma geométrica: Círculo
+
+  Cores:
+      - Azul Escuro (Masculino)
+      - Azul Claro (Feminino)
+
+===============================================================================
+                          FAIXA ETÁRIA (Tabelas)
+===============================================================================
+  IDADE   | INFO         | TEMPO
+  15-17   | Jovem       | 150
+  18-24   | Jovem Adulto| 200
+  25-34   | Adulto      | 250
+  35-49   | Adulto Velho| 300
+  50-59   | Velho       | 350
+  60+     | Idoso       | 400
+
+===============================================================================
+                          SEXO (Influência no Tempo)
+===============================================================================
+    Masculino (true) -> 500ms
+    Feminino (false) -> 1000ms
+
+    NOMES: Ana, Bia, Carla, Debora, Elio, Felipe, Gustavo, Helton
+
+===============================================================================
+                          CASOS (Classificação)
+===============================================================================
+    * Criar método de busca de problemas por idade
+    * Casos divididos em oito tipos com tempos de resolução:
+        - (100) Jovem
+        - (200) Jovem/Adulto
+        - (300) Adulto
+        - (400) Adulto/Velho
+        - (500) Velho
+        - (600) Velho/Idoso
+        - (700) Idoso
+        - (800) Todos
+
+===============================================================================
+                          FILA (Estrutura)
+===============================================================================
+    * Tamanho máximo da fila definido por número estático
+    * Forma geométrica: Retângulo horizontal, dividido em 10 partes iguais
+    * Apenas 10 posições podem ser ocupadas na fila.
+
+===============================================================================
+                          GUICHE (Estrutura e Controle)
+===============================================================================
+    * Deverá comportar uma pessoa
+    * Status: aberto/fechado, disponível/ocupado
+    * Método de atendimento
+    * Thread de controle de atendimento e status
+    * Forma geométrica: Retângulo
+    * Cores:
+        - Preto -> Guichê Fechado
+        - Amarelo -> Guichê Aberto e Disponível
+        - Vermelho -> Guichê Aberto e Ocupado
+
+===============================================================================
+                          PROPOSTA (Objetivo)
+===============================================================================
+    Simular atendimentos de "poupa-tempo" entre guichê e clientes.
+
+===============================================================================
+                          CONHECIMENTO NECESSÁRIO
+===============================================================================
+    * Lógica básica
+    * Programação em qualquer linguagem
+
+===============================================================================
+                          INTERFACE (Design)
+===============================================================================
+    * Frame retangular
+    * Alinhar guichês na parte superior
+    * Alinhar fila de clientes na parte inferior
+
+===============================================================================
+                          COMANDOS DO PROGRAMA
+===============================================================================
+    Espaço - Preenche a fila com novos clientes
+    ESC - Fecha o programa
+    Fx - Seleciona o guichê número 'x'
+        'A' - Abre o guichê
+        'F' - Fecha o guichê
+
+===============================================================================
+                          ROTINAS AUTOMÁTICAS
+===============================================================================
+    * Quando um guichê estiver disponível, emitirá um som e pegará o próximo cliente na fila.
+    * Se a fila estiver vazia, fará uma pausa e tentará novamente. Se ainda não houver clientes, o guichê será fechado.
+    * Após atendimento, registre em .log:
+        - nomeCliente
+        - idade
+        - sexo
+        - problema
+        - horaEntradaFila
+        - horaEntradaGuiche
+        - horaSaidaGuiche
+
+===============================================================================
+                          PROBLEMAS (Tipos e Erros)
+===============================================================================
+    Atributos:
+        - tipo
+        - Info
+    Tipos de problema e tempo de resolução:
+        - A: 1000ms
+        - B: 1500ms
+        - C: 2000ms
+        - D: 2500ms
+        - E: 3000ms
+        - F: 3500ms
+        - G: 4000ms
+        - H: 4500ms
+        - I: 5000ms
